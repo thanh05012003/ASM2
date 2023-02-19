@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./sp.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+
+<body ng-app="myapp">
+    <nav ng-include="'header.html'"></nav>
+    <div ng-view></div>
+    <nav ng-include="'footer.html'"></nav>
+    <script>
+        var app = angular.module("myapp", ['ngRoute']);
+        app.config(function ($routeProvider, $locationProvider) {
+            $locationProvider.hashPrefix("");
+            $routeProvider
+                .when("/home", {
+                    templateUrl: "home.html",
+                    controller: productController,
+                })
+                .when("/detail", {
+                    templateUrl: "detail.html",   
+                    controller: productController
+                })
+                .otherwise({
+                    redirectTo: "/home"
+                });
+        });
+    </script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="./js/nav.js"></script>
+<script src="./productController.js"></script>
+
+
+</html>

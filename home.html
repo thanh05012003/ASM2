@@ -1,0 +1,93 @@
+<!-- banner -->
+<div>
+    <img src="./img/carousel-1.jpg" alt="" class="w-100">
+</div>
+<div class="carousel-caption" style="left: 7%;">
+    <div class="container-fluid">
+        <div class="row justify-content-start " style="text-align: left;">
+            <div class="col-lg-7">
+                <h1 class="display-1 mb-5" style="color: black;">Organic Food Is Good For Health</h1>
+                <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5"
+                    style="background-color: #3cb815; border: none;">Products</a>
+                <a href="" class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3"
+                    style="background-color: #f65005; border: none   ;">Services</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end banner -->
+
+<!-- about me -->
+<div class="container my-5 pt-5">
+    <div class="row ">
+        <div class=" about-img col-6">
+            <img class="w-100" src="./img/avatar.jpg" alt="">
+        </div>
+        <div class="about-content col-6 pl-5 " style="padding-top: 100px;">
+            <h2 style="font-size: 50px;">Nguyễn Xuân Thành</h2>
+            <p>Rau có nhiều lợi ích. Một trong những lợi ích sức khỏe chính của rau là hàm lượng chất dinh dưỡng
+                cao của chúng. Rau
+                được chứa nhiều vitamin và khoáng chất góp phần tăng trưởng và duy trì sức khỏe tốt</p>
+            <p><i class="fa fa-check text-success me-3 pr-2"></i>Giảm nguy cơ mắc bệnh tim. </p>
+            <p><i class="fa fa-check text-success me-3 pr-2"></i>Giúp duy trì làn da khỏe mạnh. </p>
+            <p><i class="fa fa-check text-success me-3 pr-2"></i>Giúp duy trì sức khỏe đôi mắt.</p>
+            <input type="button" value="Show more" class="btn btn-success rounded-pill py-3 px-5 mt-4">
+        </div>
+    </div>
+</div>
+<!-- about me end-->
+
+<!-- title -->
+<div class="container">
+    <div class="title-products my-5 py-5" style="width: 500px;">
+        <hr style="border-bottom: 2px solid #b00a01;">
+        <h2 style="font-size: 60px;">Our Products</h2>
+    </div>
+</div>
+<!-- end title -->
+
+<!-- lọc -->
+<div class="nav-tab container-lg mt-5">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Sản phẩm mới</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Bán chạy</a>
+        </li>
+    </ul>
+</div>
+<!-- end lọc -->
+<div class="container">
+    <!-- product -->
+    <div class="row product">
+        <div class="col-md-3 mt-5" ng-repeat="pro in products">
+            <div class="thumbnail">
+                <a href="#">
+                    <!-- <img src="{{pro.link}}" alt="Lights" style="width: 100%" /> -->
+                    <div class="caption">
+                        <h5>{{pro.name}}</h5>
+                        <p>{{pro.cost}}</p>
+                    </div>
+                    <div class="btn-view-add">
+                        <div class="d-flex border-top">
+                            <small class="w-50 text-center border-right py-2 row">
+                                <i class="fa fa-eye text-success me-2 col" style="padding-top: 2px;"></i>
+                                <!-- <input type="button" value="View detail" style="background-color: white;"
+                                    class="border-0 btn" ng-click="detail(pro.id)" herf="#/detail"> -->
+                                    <a href="#/detail" class="col" style="text-decoration: none; color: black;" ng-click="detail(pro.id)">View detail</a>
+                            </small>
+                            <small class="w-50 text-center py-2 row">
+                                <i class="fa fa-shopping-bag text-success me-2 col" style="margin-top: 1px;"></i>
+                                <!-- <input type="button" value=" Add to cart" style="background-color: white;" class="border-0 btn" ng-click="addToCart()"> -->
+                                <a href="#addtocart" style="text-decoration: none; color: black;">Add to cart</a>
+                            </small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end product -
+</div>
